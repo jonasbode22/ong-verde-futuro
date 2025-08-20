@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>ONG Verde Futuro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>ONG Verde Futuro</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+  <main>
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <p>Promovemos ações ambientais para um futuro sustentável.</p>
+    </section>
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <ul>
+        <li>Reflorestamento urbano</li>
+        <li>Educação ambiental nas escolas</li>
+        <li>Reciclagem comunitária</li>
+      </ul>
+    </section>
+    <section id="contato">
+      <h2>Contato</h2>
+      <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 ONG Verde Futuro</p>
+  </footer>
+  <script src="js/script.js"></script>
+  <script>
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  document.querySelector("form").addEventListener("submit", e => {
+    const nome = e.target.querySelector("input[type=text]").value;
+    if(nome.trim() === "") {
+      alert("Por favor, preencha seu nome.");
+      e.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>
+
+</body>
+</html>
+</body>
+</html>
